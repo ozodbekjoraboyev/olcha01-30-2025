@@ -37,12 +37,12 @@ function Carusel() {
   }
 
   return (
-    <div className="flex justify-between container ">
+    <div className="flex justify-between container  ">
       <div className="m-auto container">
         <div className="relative flex items-center justify-start mt-5">
           <button
             onClick={ext}
-            className="absolute cursor-pointer top-1/2 left-4 -translate-y-1/2 border border-blue-100 shadow-md rounded-full p-3 bg-white active:translate-x-1 transition"
+            className={`absolute cursor-pointer top-1/2 left-4 -translate-y-1/2 border border-blue-100 shadow-md rounded-full p-3 bg-white active:translate-x-1 transition`}
           >
             <ArrowLeft04Icon />
           </button>

@@ -38,27 +38,24 @@ function Cardlar() {
   const handleCloseModal = () => {
     setSelectedImage(null);
   };
-console.log(cards);
 
   return (
     <div className="grid grid-cols-5 pt-5 container">
       {cards.map((item) => (
         <div key={item.id} className="p-4 relative">
           <img
-            onClick={() => toggleLike(item.name)}
+            onClick={() => toggleLike(item.id)} // Buni o'zgartirdik
             className="w-7 cursor-pointer absolute ml-52 mt-5"
             src={item.liked ? sertsa2 : sertsa1}
             alt="Heart Icon"
           />
-          <div className="absolute ml-52 mt-15">
-          </div>
           <Link to={`/adenicard/${item.alias}`}>
             <div className="p-3 rounded-xl h-[400px]">
               <img
                 className="w-64 h-60 cursor-pointer"
                 src={item.main_image}
                 alt=""
-                onClick={() => handleImageClick(item.main_image)} // Bosilganda kattaroq rasmni ko'rsatish
+                onClick={() => handleImageClick(item.main_image)}
               />
               <p className="text-xl text-black pt-2">
                 {item.name.slice(0, 19)}

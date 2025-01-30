@@ -52,15 +52,15 @@ function CaruselCard() {
           </div>
           <div>
             <h1 className="  text-xl  ">
-              <button className="border rounded px-1">
+              <button className="border rounded px-1 opacity-80">
                 {soat.toString().padStart(2, "0")}
               </button>{" "}
               :
-              <button className="border rounded px-1 ml-1">
+              <button className="border rounded px-1 opacity-80 ml-1">
                 {minut.toString().padStart(2, "0")}{" "}
               </button>{" "}
               :
-              <button className="border rounded px-1 ml-1">
+              <button className="border rounded px-1 opacity-80 ml-1">
                 {sekund.toString().padStart(2, "0")}
               </button>
             </h1>
