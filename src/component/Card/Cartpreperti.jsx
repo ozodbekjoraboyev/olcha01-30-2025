@@ -5,7 +5,7 @@ import yulduz from "../../assets/yulduz.svg";
 
 function AdeniCard() {
   const { alias } = useParams();
-  const [telefon, setTelefon] = useState(null);
+  const [telefon, setTelefon] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);

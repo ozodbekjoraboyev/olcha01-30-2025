@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 function CaruselCard() {
-  const [Card, setCard] = useState([]);
+  const [Card, setCard] = useState();
   const [soat, setSoat] = useState(15);
   const [minut, setMinut] = useState(25);
   const [sekund, setSekund] = useState(29);
@@ -43,6 +43,14 @@ function CaruselCard() {
         setCard(res.data.data.products[0]);
       });
   }, []);
+
+  if (!Card) {
+    return (
+      <div className="m-auto flex justify-end items-center absolute top-10 bottom-0 left-0 right-32">
+        <div className="w-16 h-16 border-4  border-t-transparent rounded-full animate-spin"></div>
+      </div>
+    );
+  }
   return (
     <div className="p-2">
       <div>
@@ -77,7 +85,7 @@ function CaruselCard() {
           {Card?.total_price || "total_price"} so'm
         </p>
         <p className="bg-yellow-300 p-2 mt-8 font-semibold rounded-xl px-8 w-52">
-           {Card.monthly_repayment} so'm x 12 oy
+          {Card.monthly_repayment} so'm x 12 oy
         </p>
       </div>
     </div>
